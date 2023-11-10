@@ -5,8 +5,7 @@ import { SafeAreaView } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 import { useRouter } from "expo-router";
-import { animals } from "./constants/object";
-const navigation = useRouter();
+import { colors } from "./constants/object";
 
 type Colors = {
   id: string;
@@ -14,6 +13,7 @@ type Colors = {
   title: string;
 };
 
+const navigation = useRouter();
 const topImage = require("../assets/others/TopBricks.png");
 const bottomImage = require("../assets/others/BottomBricks.png");
 
@@ -59,7 +59,7 @@ const colorsGame: React.FC = () => {
       </View>
 
       <FlatList
-        data={animals}
+        data={colors}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
         numColumns={numColumns}

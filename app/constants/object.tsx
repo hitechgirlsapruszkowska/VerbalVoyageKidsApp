@@ -286,32 +286,32 @@ export const animals = [
 export const colors = [
   {
     id: "1",
-    image: "../../assets/colors/blue.png",
+    imageUrl: "../../assets/colors/blue.png",
     title: "Blue",
   },
   {
     id: "2",
-    image: "../../assets/colors/green.png",
+    imageUrl: "../../assets/colors/green.png",
     title: "Green",
   },
   {
     id: "3",
-    image: "../../assets/colors/orange.png",
+    imageUrl: "../../assets/colors/orange.png",
     title: "Orange",
   },
   {
     id: "4",
-    image: "../../assets/colors/pink.png",
+    imageUrl: "../../assets/colors/pink.png",
     title: "Pink",
   },
   {
     id: "5",
-    image: "../../assets/colors/red.png",
+    imageUrl: "../../assets/colors/red.png",
     title: "Red",
   },
   {
     id: "6",
-    image: "../../assets/colors/yellow.png",
+    imageUrl: "../../assets/colors/yellow.png",
     title: "Yellow",
   },
 ];
