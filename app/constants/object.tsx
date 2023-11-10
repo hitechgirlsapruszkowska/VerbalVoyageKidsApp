@@ -168,116 +168,111 @@ export const animals = [
   },
   {
     id: "3",
-    imageUrl: require("../../assets/animals/bear.png"),
-    title: "Bear",
-  },
-  {
-    id: "4",
     imageUrl: require("../../assets/animals/camel.png"),
     title: "Camel",
   },
   {
-    id: "5",
+    id: "4",
     imageUrl: require("../../assets/animals/dolphin.png"),
     title: "Dolphin",
   },
   {
-    id: "6",
+    id: "5",
     imageUrl: require("../../assets/animals/elephant.png"),
     title: "Elephant",
   },
   {
-    id: "7",
+    id: "6",
     imageUrl: require("../../assets/animals/fish.png"),
     title: "Fish",
   },
   {
-    id: "8",
+    id: "7",
     imageUrl: require("../../assets/animals/giraffe.png"),
     title: "Giraffe",
   },
   {
-    id: "9",
+    id: "8",
     imageUrl: require("../../assets/animals/hippo.png"),
     title: "Hippo",
   },
   {
-    id: "10",
+    id: "9",
     imageUrl: require("../../assets/animals/insect.png"),
     title: "Insect",
   },
   {
-    id: "11",
+    id: "10",
     imageUrl: require("../../assets/animals/jellyfish.png"),
     title: "Jellyfish",
   },
   {
-    id: "12",
+    id: "11",
     imageUrl: require("../../assets/animals/kangaroo.png"),
     title: "Kangaroo",
   },
   {
-    id: "13",
+    id: "12",
     imageUrl: require("../../assets/animals/lion.png"),
     title: "Lion",
   },
   {
-    id: "14",
+    id: "13",
     imageUrl: require("../../assets/animals/monkey.png"),
     title: "Monkey",
   },
   {
-    id: "15",
+    id: "14",
     imageUrl: require("../../assets/animals/newt.png"),
     title: "Newt",
   },
   {
-    id: "16",
+    id: "15",
     imageUrl: require("../../assets/animals/owl.png"),
     title: "Owl",
   },
   {
-    id: "17",
+    id: "16",
     imageUrl: require("../../assets/animals/penguin.png"),
     title: "Penguin",
   },
   {
-    id: "18",
+    id: "17",
     imageUrl: require("../../assets/animals/queenbee.png"),
     title: "Queen Bee",
   },
   {
-    id: "19",
+    id: "18",
     imageUrl: require("../../assets/animals/rabbit.png"),
     title: "Rabbit",
   },
   {
-    id: "20",
+    id: "19",
     imageUrl: require("../../assets/animals/seal.png"),
     title: "Seal",
   },
   {
-    id: "21",
+    id: "20",
     imageUrl: require("../../assets/animals/tiger.png"),
     title: "Tiger",
   },
   {
-    id: "22",
+    id: "21",
     imageUrl: require("../../assets/animals/unicorn.png"),
     title: "Unicorn",
   },
   {
-    id: "23",
+    id: "22",
     imageUrl: require("../../assets/animals/whale.png"),
     title: "Whale",
   },
   {
-    id: "24",
+    id: "23",
     imageUrl: require("../../assets/animals/yak.png"),
     title: "Yak",
   },
   {
-    id: "25",
+    id: "24",
     imageUrl: require("../../assets/animals/zebra.png"),
     title: "Zebra",
   },
@@ -316,34 +311,45 @@ export const colors = [
   },
 ];
 
-const vehicles = [
+export const shapes = [
   {
     id: "1",
-    image: "Earnest Green",
+    imageUrl: "../../assets/shapes/circle.png",
+    title: "Circle",
   },
   {
     id: "2",
-    image: "Winston Orn",
+    imageUrl: "../../assets/shapes/cross.png",
+    title: "Cross",
   },
   {
     id: "3",
-    image: "Carlton Collins",
+    imageUrl: "../../assets/shapes/heart.png",
+    title: "Heart",
+  },
+  {
+    id: "3",
+    imageUrl: "../../assets/shapes/heart.png",
+    title: "Heart",
   },
   {
     id: "4",
-    image: "Malcolm Labadie",
+    imageUrl: "../../assets/shapes/square.png",
+    title: "Square",
   },
   {
     id: "5",
-    image: "Michelle Dare",
+    imageUrl: "../../assets/shapes/star.png",
+    title: "Star",
   },
   {
     id: "6",
-    image: "Carlton Zieme",
+    imageUrl: "../../assets/shapes/triangle.png",
+    title: "Triangle",
   },
 ];
 
-const shapes = [
+const vehicles = [
   {
     id: "1",
     image: "Earnest Green",
