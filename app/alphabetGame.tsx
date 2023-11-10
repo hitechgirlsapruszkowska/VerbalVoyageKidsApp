@@ -19,7 +19,7 @@ const bottomImage = require("../assets/others/BottomBricks.png");
 
 const alphabetGame: React.FC = () => {
   const numColumns = 2;
-  const windowWidth = Dimensions.get("window").width;
+  const windowWidth = Dimensions.get(a"window").width;
   const imageSize = windowWidth / numColumns;
 
   const renderItem = ({ item }: { item: Alphabet }) => (
@@ -52,7 +52,7 @@ const alphabetGame: React.FC = () => {
         </Text>
       </Pressable>
       <View style={styles.textContainer}>
-        <Text style={{ color: "white", fontSize: 40 }}>Animals</Text>
+        <Text style={{ color: "white", fontSize: 40 }}>Alphabet</Text>
         <Text style={{ color: "white", fontSize: 20 }}>
           Click to play sound!
         </Text>
