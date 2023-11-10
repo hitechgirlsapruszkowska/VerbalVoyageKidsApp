@@ -328,11 +328,6 @@ export const shapes = [
     title: "Heart",
   },
   {
-    id: "3",
-    imageUrl: "../../assets/shapes/heart.png",
-    title: "Heart",
-  },
-  {
     id: "4",
     imageUrl: "../../assets/shapes/square.png",
     title: "Square",
