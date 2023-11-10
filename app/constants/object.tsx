@@ -3,31 +3,37 @@ export const games = [
     id: "1",
     imageUrl: require("../../assets/games/alphagame.png"),
     title: "Alpha Game",
+    route: "alphabetGame",
   },
   {
     id: "2",
     imageUrl: require("../../assets/games/animalsgame.png"),
     title: "Animals game",
+    route: "animalsGame",
   },
   {
     id: "3",
     imageUrl: require("../../assets/games/colorsgame.png"),
     title: "Colors game",
+    route: "colorsGame",
   },
   {
     id: "4",
     imageUrl: require("../../assets/games/shapesgame.png"),
     title: "Shapes game",
+    route: "shapesGame",
   },
   {
     id: "5",
     imageUrl: require("../../assets/games/vehiclesgame.png"),
     title: "Vehicles game",
+    route: "vehiclesGame",
   },
   {
     id: "6",
     imageUrl: require("../../assets/games/animalalphagame.png"),
     title: "Animal Alpha game",
+    route: "alphabetGame",
   },
 ];
 

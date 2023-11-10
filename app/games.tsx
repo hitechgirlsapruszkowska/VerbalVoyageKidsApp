@@ -6,16 +6,21 @@ import {
   FlatList,
   Text,
   Dimensions,
+  Pressable,
 } from "react-native";
 import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
-
-import { games } from "../constants/object";
+import { createStackNavigator } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
+import { games } from "./constants/object";
+import { useRouter } from "expo-router";
+const navigation = useRouter();
 
 type Game = {
   id: string;
   imageUrl: any;
   title: string;
+  route: string;
 };
 
 const topImage = require("../assets/others/TopBricks.png");
@@ -30,7 +35,13 @@ export const GameGrid: React.FC = () => {
     <View
       style={[styles.itemContainer, { width: imageSize, height: imageSize }]}
     >
-      <Image source={item.imageUrl} style={styles.image} />
+      <Pressable
+        onPress={() => {
+          navigation.push(`/${item.route}`);
+        }}
+      >
+        <Image source={item.imageUrl} style={styles.image} />
+      </Pressable>
       <Text style={styles.title}>{item.title}</Text>
     </View>
   );
@@ -53,8 +64,8 @@ export const GameGrid: React.FC = () => {
         keyExtractor={(item) => item.id}
         numColumns={numColumns}
         contentContainerStyle={{
-          flexGrow: 1, // Ensures it can grow to fill space
-          justifyContent: "center", // Centers items when less than the screen
+          flexGrow: 1,
+          justifyContent: "center",
         }}
       />
       <Image source={bottomImage} style={styles.topBottomImage} />

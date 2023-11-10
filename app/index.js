@@ -1,22 +1,7 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import {
-  SafeAreaView,
-  StyleSheet,
-  Image,
-  View,
-  TouchableOpacity,
-  Text,
-  Pressable,
-} from "react-native";
+import { SafeAreaView, Image, View, Text, Pressable } from "react-native";
 import { Stack, useRouter } from "expo-router";
-import AppLoading from "expo-app-loading";
-
-import { CustomText, BolderText } from "../constants/text";
-import { Button } from "react-native";
 import { useResponsiveStyles } from "../components/main/indexstyles";
-
-import games from "./games/games";
 
 export default function Home() {
   const styles = useResponsiveStyles();
