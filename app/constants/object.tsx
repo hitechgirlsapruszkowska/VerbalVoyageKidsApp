@@ -344,29 +344,45 @@ export const shapes = [
   },
 ];
 
-const vehicles = [
+export const vehicles = [
   {
     id: "1",
-    image: "Earnest Green",
+    imageUrl: "../../assets/vehicles/aeroplane.png",
+    title: "Aeroplane",
   },
   {
     id: "2",
-    image: "Winston Orn",
+    imageUrl: "../../assets/vehicles/bike.png",
+    title: "Bike",
   },
   {
     id: "3",
-    image: "Carlton Collins",
+    imageUrl: "../../assets/vehicles/bus.png",
+    title: "Bus",
   },
   {
     id: "4",
-    image: "Malcolm Labadie",
+    imageUrl: "../../assets/vehicles/car.png",
+    title: "Car",
   },
   {
     id: "5",
-    image: "Michelle Dare",
+    imageUrl: "../../assets/vehicles/fire engine.png",
+    title: "Fire engine",
   },
   {
     id: "6",
-    image: "Carlton Zieme",
+    imageUrl: "../../assets/vehicles/ship.png",
+    title: "Ship",
+  },
+  {
+    id: "7",
+    imageUrl: "../../assets/vehicles/tractor.png",
+    title: "Tractor",
+  },
+  {
+    id: "8",
+    imageUrl: "../../assets/vehicles/train.png",
+    title: "Train",
   },
 ];
