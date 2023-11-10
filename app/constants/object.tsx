@@ -37,98 +37,121 @@ export const games = [
   },
 ];
 
-const alphabet = [
+export const alphabet = [
   {
     id: "1",
-    image: "assets/alpha/a.png",
+    imageUrl: "../../assets/alpha/a.png",
+    title: "a",
   },
   {
     id: "2",
-    image: "assets/alpha/b.png",
+    imageUrl: "../../assets/alpha/b.png",
+    title: "b",
   },
   {
     id: "3",
-    image: "assets/alpha/c.png",
+    imageUrl: "../../assets/alpha/c.png",
+    title: "c",
   },
   {
     id: "4",
-    image: "assets/alpha/d.png",
+    imageUrl: "../../assets/alpha/d.png",
+    title: "d",
   },
   {
     id: "5",
-    image: "assets/alpha/e.png",
+    imageUrl: "../../assets/alpha/e.png",
+    title: "e",
   },
   {
     id: "6",
-    image: "assets/alpha/f.png",
+    imageUrl: "../../assets/alpha/f.png",
+    title: "f",
   },
   {
     id: "7",
-    image: "assets/alpha/g.png",
+    imageUrl: "../../assets/alpha/g.png",
+    title: "g",
   },
   {
     id: "8",
-    image: "assets/alpha/h.png",
+    imageUrl: "../../assets/alpha/h.png",
+    title: "h",
   },
   {
     id: "9",
-    image: "assets/alpha/i.png",
+    imageUrl: "../../assets/alpha/i.png",
+    title: "i",
   },
   {
     id: "10",
-    image: "assets/alpha/j.png",
+    imageUrl: "a../../ssets/alpha/j.png",
+    title: "j",
   },
   {
     id: "11",
-    image: "assets/alpha/k.png",
+    imageUrl: "../../assets/alpha/k.png",
+    title: "k",
   },
   {
     id: "12",
-    image: "assets/alpha/l.png",
+    imageUrl: "../../assets/alpha/l.png",
+    title: "l",
   },
   {
     id: "13",
-    image: "assets/alpha/m.png",
+    imageUrl: "../../assets/alpha/m.png",
+    title: "m",
   },
   {
     id: "14",
-    image: "assets/alpha/n.png",
+    imageUrl: "../../assets/alpha/n.png",
+    title: "n",
   },
   {
     id: "15",
-    image: "assets/alpha/o.png",
+    imageUrl: "../../assets/alpha/o.png",
+    title: "o",
   },
   {
     id: "16",
-    image: "assets/alpha/p.png",
+    imageUrl: "../../assets/alpha/p.png",
+    title: "p",
   },
   {
     id: "17",
-    image: "assets/alpha/r.png",
+    imageUrl: "../../assets/alpha/r.png",
+    title: "r",
   },
   {
     id: "18",
-    image: "assets/alpha/s.png",
+    imageUrl: "../../assets/alpha/s.png",
+    title: "s",
   },
   {
     id: "19",
-    image: "assets/alpha/t.png",
+    imageUrl: "../../assets/alpha/t.png",
+    title: "t",
   },
   {
     id: "20",
-    image: "assets/alpha/u.png",
+    imageUrl: "../../assets/alpha/u.png",
+    title: "u",
   },
   {
     id: "21",
-    image: "assets/alpha/w.png",
+    imageUrl: "../../assets/alpha/w.png",
+    title: "w",
   },
   {
     id: "22",
-    image: "assets/alpha/y.png",
+    imageUrl: "../../assets/alpha/y.png",
+    title: "y",
   },
   {
     id: "23",
-    image: "assets/alpha/z.png",
+    imageUrl: "../../assets/alpha/z.png",
+    title: "z",
   },
 ];
 
