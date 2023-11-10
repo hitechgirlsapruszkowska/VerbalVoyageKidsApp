@@ -52,7 +52,7 @@ const alphabetGame: React.FC = () => {
         </Text>
       </Pressable>
       <View style={styles.textContainer}>
-        <Text style={{ color: "white", fontSize: 40 }}>Alphabet</Text>
+        <Text style={{ color: "white", fontSize: 40 }}>Shapes</Text>
         <Text style={{ color: "white", fontSize: 20 }}>
           Click to play sound!
         </Text>
