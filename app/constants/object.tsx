@@ -283,6 +283,39 @@ export const animals = [
   },
 ];
 
+export const colors = [
+  {
+    id: "1",
+    image: "../../assets/colors/blue.png",
+    title: "Blue",
+  },
+  {
+    id: "2",
+    image: "../../assets/colors/green.png",
+    title: "Green",
+  },
+  {
+    id: "3",
+    image: "../../assets/colors/orange.png",
+    title: "Orange",
+  },
+  {
+    id: "4",
+    image: "../../assets/colors/pink.png",
+    title: "Pink",
+  },
+  {
+    id: "5",
+    image: "../../assets/colors/red.png",
+    title: "Red",
+  },
+  {
+    id: "6",
+    image: "../../assets/colors/yellow.png",
+    title: "Yellow",
+  },
+];
+
 const vehicles = [
   {
     id: "1",
@@ -311,33 +344,6 @@ const vehicles = [
 ];
 
 const shapes = [
-  {
-    id: "1",
-    image: "Earnest Green",
-  },
-  {
-    id: "2",
-    image: "Winston Orn",
-  },
-  {
-    id: "3",
-    image: "Carlton Collins",
-  },
-  {
-    id: "4",
-    image: "Malcolm Labadie",
-  },
-  {
-    id: "5",
-    image: "Michelle Dare",
-  },
-  {
-    id: "6",
-    image: "Carlton Zieme",
-  },
-];
-
-const colors = [
   {
     id: "1",
     image: "Earnest Green",

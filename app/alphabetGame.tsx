@@ -19,7 +19,7 @@ const bottomImage = require("../assets/others/BottomBricks.png");
 
 const alphabetGame: React.FC = () => {
   const numColumns = 2;
-  const windowWidth = Dimensions.get(a"window").width;
+  const windowWidth = Dimensions.get("window").width;
   const imageSize = windowWidth / numColumns;
 
   const renderItem = ({ item }: { item: Alphabet }) => (
