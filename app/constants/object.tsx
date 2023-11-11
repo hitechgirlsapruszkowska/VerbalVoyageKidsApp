@@ -31,126 +31,126 @@ export const games = [
   },
   {
     id: "6",
-    imageUrl: require("../../assets/games/animalalphagame.png"),
-    title: "Animal Alpha game",
-    route: "alphabetGame",
+    imageUrl: require("../../assets/games/quizGame.png"),
+    title: "Quiz game!",
+    route: "quizGame",
   },
 ];
 
 export const alphabet = [
   {
     id: "1",
-    imageUrl: "../../assets/alpha/a.png",
+    imageUrl: require("../../assets/alpha/a.png"),
     title: "a",
   },
   {
     id: "2",
-    imageUrl: "../../assets/alpha/b.png",
+    imageUrl: require("../../assets/alpha/b.png"),
     title: "b",
   },
   {
     id: "3",
-    imageUrl: "../../assets/alpha/c.png",
+    imageUrl: require("../../assets/alpha/c.png"),
     title: "c",
   },
   {
     id: "4",
-    imageUrl: "../../assets/alpha/d.png",
+    imageUrl: require("../../assets/alpha/d.png"),
     title: "d",
   },
   {
     id: "5",
-    imageUrl: "../../assets/alpha/e.png",
+    imageUrl: require("../../assets/alpha/e.png"),
     title: "e",
   },
   {
     id: "6",
-    imageUrl: "../../assets/alpha/f.png",
+    imageUrl: require("../../assets/alpha/f.png"),
     title: "f",
   },
   {
     id: "7",
-    imageUrl: "../../assets/alpha/g.png",
+    imageUrl: require("../../assets/alpha/g.png"),
     title: "g",
   },
   {
     id: "8",
-    imageUrl: "../../assets/alpha/h.png",
+    imageUrl: require("../../assets/alpha/h.png"),
     title: "h",
   },
   {
     id: "9",
-    imageUrl: "../../assets/alpha/i.png",
+    imageUrl: require("../../assets/alpha/i.png"),
     title: "i",
   },
   {
     id: "10",
-    imageUrl: "../../assets/alpha/j.png",
+    imageUrl: require("../../assets/alpha/j.png"),
     title: "j",
   },
   {
     id: "11",
-    imageUrl: "../../assets/alpha/k.png",
+    imageUrl: require("../../assets/alpha/k.png"),
     title: "k",
   },
   {
     id: "12",
-    imageUrl: "../../assets/alpha/l.png",
+    imageUrl: require("../../assets/alpha/l.png"),
     title: "l",
   },
   {
     id: "13",
-    imageUrl: "../../assets/alpha/m.png",
+    imageUrl: require("../../assets/alpha/m.png"),
     title: "m",
   },
   {
     id: "14",
-    imageUrl: "../../assets/alpha/n.png",
+    imageUrl: require("../../assets/alpha/n.png"),
     title: "n",
   },
   {
     id: "15",
-    imageUrl: "../../assets/alpha/o.png",
+    imageUrl: require("../../assets/alpha/o.png"),
     title: "o",
   },
   {
     id: "16",
-    imageUrl: "../../assets/alpha/p.png",
+    imageUrl: require("../../assets/alpha/p.png"),
     title: "p",
   },
   {
     id: "17",
-    imageUrl: "../../assets/alpha/r.png",
+    imageUrl: require("../../assets/alpha/r.png"),
     title: "r",
   },
   {
     id: "18",
-    imageUrl: "../../assets/alpha/s.png",
+    imageUrl: require("../../assets/alpha/s.png"),
     title: "s",
   },
   {
     id: "19",
-    imageUrl: "../../assets/alpha/t.png",
+    imageUrl: require("../../assets/alpha/t.png"),
     title: "t",
   },
   {
     id: "20",
-    imageUrl: "../../assets/alpha/u.png",
+    imageUrl: require("../../assets/alpha/u.png"),
     title: "u",
   },
   {
     id: "21",
-    imageUrl: "../../assets/alpha/w.png",
+    imageUrl: require("../../assets/alpha/w.png"),
     title: "w",
   },
   {
     id: "22",
-    imageUrl: "../../assets/alpha/y.png",
+    imageUrl: require("../../assets/alpha/y.png"),
     title: "y",
   },
   {
     id: "23",
-    imageUrl: "../../assets/alpha/z.png",
+    imageUrl: require("../../assets/alpha/z.png"),
     title: "z",
   },
 ];
@@ -281,32 +281,32 @@ export const animals = [
 export const colors = [
   {
     id: "1",
-    imageUrl: "../../assets/colors/blue.png",
+    imageUrl: require("../../assets/colors/blue.png"),
     title: "Blue",
   },
   {
     id: "2",
-    imageUrl: "../../assets/colors/green.png",
+    imageUrl: require("../../assets/colors/green.png"),
     title: "Green",
   },
   {
     id: "3",
-    imageUrl: "../../assets/colors/orange.png",
+    imageUrl: require("../../assets/colors/orange.png"),
     title: "Orange",
   },
   {
     id: "4",
-    imageUrl: "../../assets/colors/pink.png",
+    imageUrl: require("../../assets/colors/pink.png"),
     title: "Pink",
   },
   {
     id: "5",
-    imageUrl: "../../assets/colors/red.png",
+    imageUrl: require("../../assets/colors/red.png"),
     title: "Red",
   },
   {
     id: "6",
-    imageUrl: "../../assets/colors/yellow.png",
+    imageUrl: require("../../assets/colors/yellow.png"),
     title: "Yellow",
   },
 ];
@@ -314,32 +314,32 @@ export const colors = [
 export const shapes = [
   {
     id: "1",
-    imageUrl: "../../assets/shapes/circle.png",
+    imageUrl: require("../../assets/shapes/circle.png"),
     title: "Circle",
   },
   {
     id: "2",
-    imageUrl: "../../assets/shapes/cross.png",
+    imageUrl: require("../../assets/shapes/cross.png"),
     title: "Cross",
   },
   {
     id: "3",
-    imageUrl: "../../assets/shapes/heart.png",
+    imageUrl: require("../../assets/shapes/heart.png"),
     title: "Heart",
   },
   {
     id: "4",
-    imageUrl: "../../assets/shapes/square.png",
+    imageUrl: require("../../assets/shapes/square.png"),
     title: "Square",
   },
   {
     id: "5",
-    imageUrl: "../../assets/shapes/star.png",
+    imageUrl: require("../../assets/shapes/star.png"),
     title: "Star",
   },
   {
     id: "6",
-    imageUrl: "../../assets/shapes/triangle.png",
+    imageUrl: require("../../assets/shapes/triangle.png"),
     title: "Triangle",
   },
 ];
@@ -347,42 +347,81 @@ export const shapes = [
 export const vehicles = [
   {
     id: "1",
-    imageUrl: "../../assets/vehicles/aeroplane.png",
+    imageUrl: require("../../assets/vehicles/aeroplane.png"),
     title: "Aeroplane",
   },
   {
     id: "2",
-    imageUrl: "../../assets/vehicles/bike.png",
+    imageUrl: require("../../assets/vehicles/bike.png"),
     title: "Bike",
   },
   {
     id: "3",
-    imageUrl: "../../assets/vehicles/bus.png",
+    imageUrl: require("../../assets/vehicles/bus.png"),
     title: "Bus",
   },
   {
     id: "4",
-    imageUrl: "../../assets/vehicles/car.png",
+    imageUrl: require("../../assets/vehicles/car.png"),
     title: "Car",
   },
   {
     id: "5",
-    imageUrl: "../../assets/vehicles/fire engine.png",
+    imageUrl: require("../../assets/vehicles/fire engine.png"),
     title: "Fire engine",
   },
   {
     id: "6",
-    imageUrl: "../../assets/vehicles/ship.png",
+    imageUrl: require("../../assets/vehicles/ship.png"),
     title: "Ship",
   },
   {
     id: "7",
-    imageUrl: "../../assets/vehicles/tractor.png",
+    imageUrl: require("../../assets/vehicles/tractor.png"),
     title: "Tractor",
   },
   {
     id: "8",
-    imageUrl: "../../assets/vehicles/train.png",
+    imageUrl: require("../../assets/vehicles/train.png"),
     title: "Train",
+  },
+];
+
+export const quizData = [
+  {
+    question: "What letter does this animal start with?",
+    imageUrl: require("../../assets/animals/antelope.png"),
+    options: ["a", "g", "f", "z"],
+    answer: "a",
+  },
+  {
+    question: "What letter does this animal start with?",
+    imageUrl: require("../../assets/animals/fish.png"),
+    options: ["f", "c", "d", "r"],
+    answer: "f",
+  },
+  {
+    question: "What letter does this vehicle start with?",
+    imageUrl: require("../../assets/vehicles/bike.png"),
+    options: ["r", "b", "j", "m"],
+    answer: "b",
+  },
+  {
+    question: "What letter does this vehicle start with?",
+    imageUrl: require("../../assets/vehicles/tractor.png"),
+    options: ["s", "w", "a", "r"],
+    answer: "t",
+  },
+  {
+    question: "What kind of shape is this?",
+    imageUrl: require("../../assets/shapes/triangle.png"),
+    options: ["heart", "square", "circle", "triangle"],
+    answer: "triangle",
+  },
+  {
+    question: "What kind of shape is this?",
+    imageUrl: require("../../assets/shapes/heart.png"),
+    options: ["heart", "square", "circle", "triangle"],
+    answer: "heart",
   },
 ];

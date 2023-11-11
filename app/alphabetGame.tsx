@@ -2,8 +2,6 @@ import { StyleSheet, Text, View } from "react-native";
 import { Image, FlatList, Dimensions, Pressable } from "react-native";
 import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import { alphabet } from "./constants/object";
 const navigation = useRouter();
