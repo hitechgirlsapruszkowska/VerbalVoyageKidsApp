@@ -1,11 +1,18 @@
 import { StyleSheet, Text, View } from "react-native";
-import { Image, FlatList, Dimensions, Pressable } from "react-native";
+import {
+  Image,
+  FlatList,
+  Dimensions,
+  Pressable,
+  TouchableOpacity,
+} from "react-native";
 import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { useNavigation } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import { animals } from "./constants/object";
+
 const navigation = useRouter();
 
 type Animals = {
@@ -26,7 +33,9 @@ const alphabetGame: React.FC = () => {
     <View
       style={[styles.itemContainer, { width: imageSize, height: imageSize }]}
     >
-      <Image source={item.imageUrl} style={styles.image} />
+      <TouchableOpacity>
+        <Image source={item.imageUrl} style={styles.image} />
+      </TouchableOpacity>
       <Text style={styles.title}>{item.title}</Text>
     </View>
   );
