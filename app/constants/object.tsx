@@ -425,3 +425,5 @@ export const quizData = [
     answer: "heart",
   },
 ];
+
+// const apiKey = "AIzaSyDrWhCnJ1wDyydNp-GNDrRpGqakD9FSonU";
