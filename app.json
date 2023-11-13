@@ -4,7 +4,6 @@
     "web": {
       "bundler": "metro"
     },
-    "plugins": ["expo-router"],
     "name": "reactnativeapp",
     "slug": "reactnativeapp",
     "assetBundlePatterns": ["assets/fonts/*"]

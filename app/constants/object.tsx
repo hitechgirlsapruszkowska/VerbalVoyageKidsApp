@@ -367,7 +367,7 @@ export const vehicles = [
   },
   {
     id: "5",
-    imageUrl: require("../../assets/vehicles/fire engine.png"),
+    imageUrl: require("../../assets/vehicles/fireengine.png"),
     title: "Fire engine",
   },
   {

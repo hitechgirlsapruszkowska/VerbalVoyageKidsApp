@@ -1,9 +1,12 @@
+import React, { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Image, FlatList, Dimensions, Pressable } from "react-native";
 import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
 import { useRouter } from "expo-router";
 import { vehicles } from "./constants/object";
+import { customFont } from "./fonts";
+// import * as Font from "expo-font";
 
 type Vehicles = {
   id: string;
@@ -15,6 +18,9 @@ const topImage = require("../assets/others/TopBricks.png");
 const bottomImage = require("../assets/others/BottomBricks.png");
 
 const vehiclesGame: React.FC = () => {
+  useEffect(() => {
+    customFont();
+  }, []);
   const navigation = useRouter();
   const numColumns = 2;
   const windowWidth = Dimensions.get("window").width;
@@ -50,8 +56,14 @@ const vehiclesGame: React.FC = () => {
         </Text>
       </Pressable>
       <View style={styles.textContainer}>
-        <Text style={{ color: "white", fontSize: 40 }}>Vehicles</Text>
-        <Text style={{ color: "white", fontSize: 20 }}>
+        <Text
+          style={{ color: "white", fontSize: 75, fontFamily: "pixel-medium" }}
+        >
+          Vehicles
+        </Text>
+        <Text
+          style={{ color: "white", fontSize: 30, fontFamily: "pixel-medium" }}
+        >
           Click to play sound!
         </Text>
       </View>
@@ -79,6 +91,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
+    margin: 20,
   },
   image: {
     width: Dimensions.get("window").width * 0.4,
@@ -89,6 +102,8 @@ const styles = StyleSheet.create({
   title: {
     textAlign: "center",
     color: "white",
+    fontFamily: "pixel-regular",
+    fontSize: 30,
   },
   container: {
     flex: 1,
