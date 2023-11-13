@@ -2,8 +2,6 @@ import { StyleSheet, Text, View } from "react-native";
 import { Image, FlatList, Dimensions, Pressable } from "react-native";
 import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import { colors } from "./constants/object";
 
@@ -13,11 +11,11 @@ type Colors = {
   title: string;
 };
 
-const navigation = useRouter();
 const topImage = require("../assets/others/TopBricks.png");
 const bottomImage = require("../assets/others/BottomBricks.png");
 
 const colorsGame: React.FC = () => {
+  const navigation = useRouter();
   const numColumns = 2;
   const windowWidth = Dimensions.get("window").width;
   const imageSize = windowWidth / numColumns;

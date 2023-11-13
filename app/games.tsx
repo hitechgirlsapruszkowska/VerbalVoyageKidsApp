@@ -7,14 +7,12 @@ import {
   Text,
   Dimensions,
   Pressable,
+  TouchableOpacity,
 } from "react-native";
 import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
 import { games } from "./constants/object";
 import { useRouter } from "expo-router";
-const navigation = useRouter();
 
 type Game = {
   id: string;
@@ -27,6 +25,7 @@ const topImage = require("../assets/others/TopBricks.png");
 const bottomImage = require("../assets/others/BottomBricks.png");
 
 export const GameGrid: React.FC = () => {
+  const navigation = useRouter();
   const numColumns = 2;
   const windowWidth = Dimensions.get("window").width;
   const imageSize = windowWidth / numColumns;
@@ -35,13 +34,13 @@ export const GameGrid: React.FC = () => {
     <View
       style={[styles.itemContainer, { width: imageSize, height: imageSize }]}
     >
-      <Pressable
+      <TouchableOpacity
         onPress={() => {
           navigation.push(`/${item.route}`);
         }}
       >
         <Image source={item.imageUrl} style={styles.image} />
-      </Pressable>
+      </TouchableOpacity>
       <Text style={styles.title}>{item.title}</Text>
     </View>
   );

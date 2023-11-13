@@ -6,7 +6,6 @@ import {
   View,
   Image,
   TouchableOpacity,
-  Alert,
   Dimensions,
 } from "react-native";
 
@@ -59,7 +58,6 @@ const QuizGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
-  //   const navigation = useNavigation();
   const navigation = useRouter();
 
   const handleAnswer = (selectedAnswer: any) => {

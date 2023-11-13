@@ -12,8 +12,6 @@ import { useRouter } from "expo-router";
 import { animals } from "./constants/object";
 import { textToSpeech } from "./googletts";
 
-const navigation = useRouter();
-
 type Animals = {
   id: string;
   imageUrl: any;
@@ -23,7 +21,8 @@ type Animals = {
 const topImage = require("../assets/others/TopBricks.png");
 const bottomImage = require("../assets/others/BottomBricks.png");
 
-const alphabetGame: React.FC = () => {
+const animalsGame: React.FC = () => {
+  const navigation = useRouter();
   const numColumns = 2;
   const windowWidth = Dimensions.get("window").width;
   const imageSize = windowWidth / numColumns;
@@ -81,7 +80,7 @@ const alphabetGame: React.FC = () => {
   );
 };
 
-export default alphabetGame;
+export default animalsGame;
 
 const styles = StyleSheet.create({
   itemContainer: {

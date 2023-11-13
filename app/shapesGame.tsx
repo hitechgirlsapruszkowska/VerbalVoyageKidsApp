@@ -2,11 +2,8 @@ import { StyleSheet, Text, View } from "react-native";
 import { Image, FlatList, Dimensions, Pressable } from "react-native";
 import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { useNavigation } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import { shapes } from "./constants/object";
-const navigation = useRouter();
 
 type Shapes = {
   id: string;
@@ -17,7 +14,8 @@ type Shapes = {
 const topImage = require("../assets/others/TopBricks.png");
 const bottomImage = require("../assets/others/BottomBricks.png");
 
-const alphabetGame: React.FC = () => {
+const shapesGame: React.FC = () => {
+  const navigation = useRouter();
   const numColumns = 2;
   const windowWidth = Dimensions.get("window").width;
   const imageSize = windowWidth / numColumns;
@@ -73,7 +71,7 @@ const alphabetGame: React.FC = () => {
   );
 };
 
-export default alphabetGame;
+export default shapesGame;
 
 const styles = StyleSheet.create({
   itemContainer: {

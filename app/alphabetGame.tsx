@@ -4,7 +4,6 @@ import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
 import { useRouter } from "expo-router";
 import { alphabet } from "./constants/object";
-const navigation = useRouter();
 
 type Alphabet = {
   id: string;
@@ -16,6 +15,7 @@ const topImage = require("../assets/others/TopBricks.png");
 const bottomImage = require("../assets/others/BottomBricks.png");
 
 const alphabetGame: React.FC = () => {
+  const navigation = useRouter();
   const numColumns = 2;
   const windowWidth = Dimensions.get("window").width;
   const imageSize = windowWidth / numColumns;
