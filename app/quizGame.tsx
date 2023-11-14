@@ -161,8 +161,8 @@ const QuizGame = () => {
               <TouchableOpacity
                 key={index}
                 onPress={() => {
-                  handleAnswer(item); // Existing function to handle answer selection
-                  textToSpeech(`${item}`); // Function to read the option aloud
+                  handleAnswer(item);
+                  textToSpeech(`${item}`);
                 }}
                 style={styles.optionContainer}
               >
@@ -237,11 +237,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "pixel-medium",
     fontSize: 40,
-  },
-  topBottomImage: {
-    width: "100%",
-    height: Dimensions.get("window").height * 0.1,
-    resizeMode: "cover",
   },
   itemContainer: {
     flex: 1,

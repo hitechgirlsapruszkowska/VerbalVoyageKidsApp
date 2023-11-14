@@ -123,11 +123,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 20,
   },
-  // topBottomImage: {
-  //   width: "100%",
-  //   height: Dimensions.get("window").height * 0.1,
-  //   resizeMode: "cover",
-  // },
   topBottomImage: {
     width: "100%",
     height: Dimensions.get("window").height * 0.1,
