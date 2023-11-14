@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   View,
   Image,
@@ -13,6 +13,7 @@ import { Stack } from "expo-router";
 import { SafeAreaView } from "react-native";
 import { games } from "./constants/object";
 import { useRouter } from "expo-router";
+import { customFont } from "./fonts";
 
 type Game = {
   id: string;
@@ -25,6 +26,9 @@ const topImage = require("../assets/others/TopBricks.png");
 const bottomImage = require("../assets/others/BottomBricks.png");
 
 export const GameGrid: React.FC = () => {
+  useEffect(() => {
+    customFont();
+  }, []);
   const navigation = useRouter();
   const numColumns = 2;
   const windowWidth = Dimensions.get("window").width;
@@ -47,12 +51,26 @@ export const GameGrid: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Stack.Screen options={{ headerShown: false }} />
-      <Image source={topImage} style={styles.topBottomImage} />
+      <Stack.Screen options={{ headerTransparent: true, headerTitle: "" }} />
+      <Image
+        source={topImage}
+        style={[styles.topBottomImage, styles.topImage]}
+      />
 
       <View style={styles.textContainer}>
-        <Text style={{ color: "white", fontSize: 30 }}>Ready to learn?</Text>
-        <Text style={{ color: "white", fontSize: 15 }}>
+        <Text
+          style={{
+            color: "white",
+            fontSize: 45,
+            fontFamily: "pixel-medium",
+            marginBottom: 10,
+          }}
+        >
+          Ready to learn?
+        </Text>
+        <Text
+          style={{ color: "white", fontSize: 25, fontFamily: "pixel-medium" }}
+        >
           Pick game to start!
         </Text>
       </View>
@@ -67,7 +85,10 @@ export const GameGrid: React.FC = () => {
           justifyContent: "center",
         }}
       />
-      <Image source={bottomImage} style={styles.topBottomImage} />
+      <Image
+        source={bottomImage}
+        style={[styles.topBottomImage, styles.bottomImage]}
+      />
     </SafeAreaView>
   );
 };
@@ -78,6 +99,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
+    margin: 12,
   },
   image: {
     width: Dimensions.get("window").width * 0.4,
@@ -88,6 +110,8 @@ const styles = StyleSheet.create({
   title: {
     textAlign: "center",
     color: "white",
+    fontFamily: "pixel-regular",
+    fontSize: 20,
   },
   container: {
     flex: 1,
@@ -99,10 +123,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 20,
   },
+  // topBottomImage: {
+  //   width: "100%",
+  //   height: Dimensions.get("window").height * 0.1,
+  //   resizeMode: "cover",
+  // },
   topBottomImage: {
     width: "100%",
     height: Dimensions.get("window").height * 0.1,
     resizeMode: "cover",
+    position: "absolute",
+    zIndex: -1,
+  },
+  topImage: {
+    top: 0,
+  },
+  bottomImage: {
+    bottom: 0,
   },
 });
 

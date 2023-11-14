@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import {
   Image,
@@ -11,6 +12,7 @@ import { SafeAreaView } from "react-native";
 import { useRouter } from "expo-router";
 import { animals } from "./constants/object";
 import { textToSpeech } from "./googletts";
+import { customFont } from "./fonts";
 
 type Animals = {
   id: string;
@@ -18,10 +20,12 @@ type Animals = {
   title: string;
 };
 
-const topImage = require("../assets/others/TopBricks.png");
-const bottomImage = require("../assets/others/BottomBricks.png");
+const topImage = require("../assets/others/animalsTop.png");
 
 const animalsGame: React.FC = () => {
+  useEffect(() => {
+    customFont();
+  }, []);
   const navigation = useRouter();
   const numColumns = 2;
   const windowWidth = Dimensions.get("window").width;
@@ -40,28 +44,41 @@ const animalsGame: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Stack.Screen options={{ headerShown: false }} />
-      <Image source={topImage} style={styles.topBottomImage} />
+      <Stack.Screen
+        options={{
+          headerTransparent: true,
+          headerTitle: "",
+          headerLeft: null as any,
+        }}
+      />
+      <Image
+        source={topImage}
+        style={[styles.topBottomImage, styles.topImage]}
+      />
       <Pressable
         onPress={() => {
           navigation.push("/games");
         }}
       >
-        <Text
+        <Image
+          source={require("../assets/others/arrow3.png")}
           style={{
-            color: "white",
-            fontSize: 25,
-            textAlign: "left",
-            marginLeft: 15,
+            marginLeft: 5,
+            width: 85,
+            height: 70,
           }}
-        >
-          ⋘
-        </Text>
+        />
       </Pressable>
       <View style={styles.textContainer}>
-        <Text style={{ color: "white", fontSize: 40 }}>Animals</Text>
-        <Text style={{ color: "white", fontSize: 20 }}>
-          Click to play sound!
+        <Text
+          style={{ color: "white", fontSize: 65, fontFamily: "pixel-medium" }}
+        >
+          Animals
+        </Text>
+        <Text
+          style={{ color: "white", fontSize: 20, fontFamily: "pixel-medium" }}
+        >
+          Click animal to play sound!
         </Text>
       </View>
 
@@ -75,7 +92,6 @@ const animalsGame: React.FC = () => {
           justifyContent: "center",
         }}
       />
-      <Image source={bottomImage} style={styles.topBottomImage} />
     </SafeAreaView>
   );
 };
@@ -88,30 +104,39 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     overflow: "hidden",
+    margin: 20,
   },
   image: {
     width: Dimensions.get("window").width * 0.4,
     height: Dimensions.get("window").height * 0.2,
     resizeMode: "cover",
-    borderRadius: 10,
+    borderRadius: 30,
   },
   title: {
     textAlign: "center",
     color: "white",
+    fontFamily: "pixel-regular",
+    fontSize: 30,
   },
   container: {
     flex: 1,
-    backgroundColor: "#FF8E26",
+    backgroundColor: "#FF8C23",
     justifyContent: "space-between",
   },
   textContainer: {
     alignItems: "center",
     justifyContent: "center",
-    paddingVertical: 20,
+    paddingBottom: 20,
   },
+
   topBottomImage: {
     width: "100%",
-    height: Dimensions.get("window").height * 0.1,
+    height: Dimensions.get("window").height * 0.25,
     resizeMode: "cover",
+    position: "absolute",
+    zIndex: -1,
+  },
+  topImage: {
+    top: 0,
   },
 });

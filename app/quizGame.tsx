@@ -7,7 +7,11 @@ import {
   Image,
   TouchableOpacity,
   Dimensions,
+  Pressable,
 } from "react-native";
+import { Stack } from "expo-router";
+import { SafeAreaView } from "react-native";
+import { textToSpeech } from "./googletts";
 
 const quizData = [
   {
@@ -54,6 +58,10 @@ const quizData = [
   },
 ];
 
+const topImage = require("../assets/others/quizTop.png");
+const congratulationsImage = require("../assets/others/congratulations.png");
+const tryAgainImage = require("../assets/others/tryagain.png");
+
 const QuizGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -85,46 +93,86 @@ const QuizGame = () => {
   };
 
   return (
-    <View style={styles.container}>
-      {showScore ? (
-        <View style={styles.questionContainer}>
-          <TouchableOpacity
-            onPress={score >= 3 ? goToGames : restartQuiz}
-            style={styles.resultContainer}
-          >
-            <Text
-              style={[
-                styles.resultText,
-                score >= 3 ? styles.successText : styles.failureText,
-              ]}
-            >
-              {score >= 3
-                ? `Your score: ${score}! Wow, you are wonderful! It is time to learn new things!`
-                : `Your score: ${score}. Don't worry and try again!`}
-            </Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <View style={styles.questionContainer}>
-          <Text style={styles.questionStyle}>
-            {quizData[currentQuestion].question}
-          </Text>
-          <Image
-            source={quizData[currentQuestion].imageUrl}
-            style={styles.image}
-          />
-          {quizData[currentQuestion].options.map((item, index) => (
+    <SafeAreaView style={styles.container}>
+      <Stack.Screen
+        options={{
+          headerTransparent: true,
+          headerTitle: "",
+          headerLeft: null as any,
+        }}
+      />
+
+      <Image
+        source={topImage}
+        style={[styles.topBottomImage, styles.topImage]}
+      />
+
+      <Pressable
+        onPress={() => {
+          navigation.push("/games");
+        }}
+      >
+        <Image
+          source={require("../assets/others/arrow3.png")}
+          style={{
+            marginLeft: 9,
+            width: 85,
+            height: 70,
+          }}
+        />
+      </Pressable>
+
+      <View style={styles.itemContainer}>
+        {showScore ? (
+          <View style={styles.resultContainer}>
+            <Image
+              source={score >= 4 ? congratulationsImage : tryAgainImage}
+              style={styles.congratulationsImage}
+            />
             <TouchableOpacity
-              key={index}
-              onPress={() => handleAnswer(item)}
-              style={styles.optionContainer}
+              onPress={score >= 4 ? goToGames : restartQuiz}
+              style={styles.resultContainer}
             >
-              <Text style={styles.optionStyle}>{item}</Text>
+              <Text
+                style={[
+                  styles.resultText,
+                  score >= 4 ? styles.successText : styles.failureText,
+                ]}
+              >
+                {score >= 4
+                  ? `Your score: ${score}/6! You are wonderful! Click here to learn new things!`
+                  : `Your score: ${score}/6. Don't worry! Click here to try again!`}
+              </Text>
             </TouchableOpacity>
-          ))}
-        </View>
-      )}
-    </View>
+          </View>
+        ) : (
+          <View style={styles.questionContainer}>
+            <View style={styles.headQuestion}>
+              <Text style={styles.questionStyle}>
+                {quizData[currentQuestion].question}
+              </Text>
+              <Image
+                source={quizData[currentQuestion].imageUrl}
+                style={styles.image}
+              />
+            </View>
+
+            {quizData[currentQuestion].options.map((item, index) => (
+              <TouchableOpacity
+                key={index}
+                onPress={() => {
+                  handleAnswer(item); // Existing function to handle answer selection
+                  textToSpeech(`${item}`); // Function to read the option aloud
+                }}
+                style={styles.optionContainer}
+              >
+                <Text style={styles.optionStyle}>{item}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        )}
+      </View>
+    </SafeAreaView>
   );
 };
 
@@ -134,46 +182,104 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#FF8E26",
-    alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
   },
   questionContainer: {
-    backgroundColor: "#F07300",
     padding: 10,
     margin: 10,
-    borderRadius: 5,
-    color: "white",
+    borderRadius: 30,
+  },
+  resultContainer: {
+    backgroundColor: "#FFEAD7",
+    padding: 10,
+    margin: 10,
+    borderRadius: 30,
   },
   optionStyle: {
-    color: "white",
+    color: "#EA7000",
     padding: 5,
+    fontFamily: "pixel-regular",
+    fontSize: 40,
+    marginLeft: 10,
   },
   optionContainer: {
-    borderColor: "white",
+    borderColor: "#EA7000",
     borderWidth: 2,
     marginTop: 10,
+    borderRadius: 30,
+    backgroundColor: "#FFF7EF",
   },
   image: {
     width: Dimensions.get("window").width * 0.4,
     height: Dimensions.get("window").height * 0.2,
     resizeMode: "cover",
-    borderRadius: 10,
+    borderRadius: 40,
   },
   questionStyle: {
-    color: "white",
-  },
-  resultContainer: {
-    padding: 10,
-    alignItems: "center",
+    color: "#EA7000",
+    fontFamily: "pixel-medium",
+    fontSize: 32,
+    textAlign: "center",
   },
   resultText: {
     fontSize: 18,
-    fontWeight: "bold",
+    textAlign: "center",
+    fontFamily: "pixel-medium",
   },
   successText: {
+    fontFamily: "pixel-medium",
+    fontSize: 40,
     color: "green",
+    textAlign: "center",
   },
   failureText: {
     color: "red",
+    textAlign: "center",
+    fontFamily: "pixel-medium",
+    fontSize: 40,
+  },
+  topBottomImage: {
+    width: "100%",
+    height: Dimensions.get("window").height * 0.1,
+    resizeMode: "cover",
+  },
+  itemContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+    margin: 20,
+  },
+  headQuestion: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FFF7EF",
+    padding: 10,
+    borderRadius: 30,
+  },
+  congratulationsImage: {
+    width: Dimensions.get("window").width * 0.8,
+    height: Dimensions.get("window").height * 0.3,
+    resizeMode: "contain",
+    marginVertical: 20,
+    // borderRadius: 100,
+  },
+  tryAgainImage: {
+    width: Dimensions.get("window").width * 0.8,
+    height: Dimensions.get("window").height * 0.3,
+    resizeMode: "contain",
+    marginVertical: 20,
+    // borderRadius: 100,
+  },
+  topBottomImage: {
+    width: "100%",
+    height: Dimensions.get("window").height * 0.22,
+    resizeMode: "cover",
+    position: "absolute",
+    zIndex: -1,
+  },
+  topImage: {
+    top: 0,
   },
 });
