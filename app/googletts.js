@@ -4,7 +4,7 @@ import * as FileSystem from "expo-file-system";
 
 export const textToSpeech = async (text) => {
   try {
-    const apiKey = "AIzaSyDrWhCnJ1wDyydNp-GNDrRpGqakD9FSonU";
+    const apiKey = "";
     const apiUrl = `https://texttospeech.googleapis.com/v1beta1/text:synthesize?alt=json&key=${apiKey}`;
 
     const response = await axios.post(
